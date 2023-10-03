@@ -35,9 +35,12 @@ function typeHello() {
   type();
 }
 
-// Typing effect for "message"
+
+
 function typeMessage() {
-  const messageText = "Enjoy browsing while listening to Fur Elise by Beethoven";
+  document.querySelector('.screen').classList.add('expanded');
+
+  const messageText = "|E|n|j|o|y| |b|r|o|w|s|i|n|g| |w|h|i|l|e| |l|i|s|t|e|n|i|n|g| |t|o| |F|u|r| |E|l|i|s|e| |b|y| |B|e|e|t|h|o|v|e|n| ";
   const messageElement = document.querySelector('.message');
   let index = 0;
 
@@ -45,17 +48,33 @@ function typeMessage() {
     if (index < messageText.length) {
       messageElement.textContent += messageText.charAt(index);
       index++;
-      setTimeout(type, 50); // Adjust the typing speed (milliseconds)
+      if (messageText.charAt(index - 1) === '|') {
+        setTimeout(blinkCursor, 70);
+      } else {
+        setTimeout(type, 70);
+      }
     }
   }
 
-  type();
+  function blinkCursor() {
+    const currentText = messageElement.textContent;
+    if (currentText.endsWith("|")) {
+      messageElement.textContent = currentText.substring(0, currentText.length - 1);
+      setTimeout(type, 5);  // Resume typing after a delay
+    } else {
+      messageElement.textContent += "|";
+      setTimeout(blinkCursor, 5);
+    }
+  }
+
+  type();  // Start typing the message
 }
 
-// Call the typing functions
-
-
+// This can be called on a button click or when the document loads, as needed.
 typeMessage();
+
+
+
 
 
 // Call the updateClock() function every second
@@ -208,18 +227,31 @@ document.addEventListener("mouseup", function () {
 function toggleMusic() {
   const vinylRecord = document.querySelector('.vinyl-record');
   const messageContainer = document.querySelector('.message-container');
-
-  messageContainer.classList.add('fade-out');
-  vinylRecord.classList.add('.expanded');
-  setTimeout(function() {
-    messageContainer.style.display = 'none';
-    vinylRecord.classList.toggle('expand');
-  }, 1000);
-
+  const musicButton = document.querySelector('.music-button');
   if (isPlaying) {
+
     audio.pause();
     isPlaying = false;
+
+
+    messageContainer.classList.remove('fade-out'); // Show the message
+    messageContainer.style.display = 'block';
+    vinylRecord.style.display='none'; // Assume you want to "shrink" the record when music stops
+
   } else {
+
+
+    messageContainer.classList.add('fade-out');
+    vinylRecord.classList.add('expand');
+    vinylRecord.style.display='block';
+
+    setTimeout(function() {
+      const messageElement = document.querySelector('.music-button');
+      messageElement.textContent = "⏸"
+      messageContainer.style.display = 'none';
+      vinylRecord.classList.add('expand'); // This will either add or remove the 'expand' class based on its current state
+    }, 1000);
+
     audio.play();
     isPlaying = true;
   }
