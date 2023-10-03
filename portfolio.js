@@ -32,6 +32,7 @@ function typeHello() {
     }
   }
 
+  
   type();
 }
 
