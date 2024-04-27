@@ -10,13 +10,13 @@ function updateClock() {
     minutes = "0" + minutes;
   }
 
-
   // Format the time string
-  var timeString = hours + ":" + minutes ;
+  var timeString = hours + ":" + minutes;
 
   // Update the clock
   document.querySelector(".floating_Clock").textContent = timeString;
 }
+
 // Typing effect for "Hello"
 typeHello();
 function typeHello() {
@@ -32,78 +32,66 @@ function typeHello() {
     }
   }
 
-  
   type();
 }
 
-
-
 function typeMessage() {
   document.querySelector('.screen').classList.add('expanded');
+  const lighting = $('.lighting');
 
-  const messageText = "|E|n|j|o|y| |b|r|o|w|s|i|n|g| |w|h|i|l|e| |l|i|s|t|e|n|i|n|g| |t|o| |F|u|r| |E|l|i|s|e| |b|y| |B|e|e|t|h|o|v|e|n| ";
+  const messages = [
+    "Welcome to my portfolio!",
+    "\nLet's create something beautiful together!"
+  ];
   const messageElement = document.querySelector('.message');
   let index = 0;
+  let charIndex = 0;
+  let deleteMode = false;
 
   function type() {
-    if (index < messageText.length) {
-      messageElement.textContent += messageText.charAt(index);
-      index++;
-      if (messageText.charAt(index - 1) === '|') {
-        setTimeout(blinkCursor, 70);
+    if (index < messages.length) {
+      const message = messages[index];
+      if (deleteMode && messageElement.textContent.length > 0) {
+        for (let i = 0; i < messageElement.textContent.length; i++) {
+          setTimeout(() => {
+            messageElement.textContent = messageElement.textContent.slice(0, -1);
+          }, 50 * i);
+        }
+        charIndex = 0;
+        setTimeout(() => {
+          messageElement.textContent += message.charAt(charIndex);
+          charIndex++;
+          setTimeout(type, 50); // Adjust the typing speed (milliseconds)
+          deleteMode = false;
+        }, 50 * messageElement.textContent.length);
+      } else if (charIndex < message.length) {
+        setTimeout(() => {
+          messageElement.textContent += message.charAt(charIndex);
+          charIndex++;
+          setTimeout(type, 50); // Adjust the typing speed (milliseconds)
+        }, 70);
       } else {
-        setTimeout(type, 70);
-      }
+        index++;
+        charIndex = 0;
+        deleteMode = true;
+        setTimeout(type, 1500); // Delay before typing the next message
+        lighting.css('display', 'block');
+           }
     }
   }
 
-  function blinkCursor() {
-    const currentText = messageElement.textContent;
-    if (currentText.endsWith("|")) {
-      messageElement.textContent = currentText.substring(0, currentText.length - 1);
-      setTimeout(type, 5);  // Resume typing after a delay
-    } else {
-      messageElement.textContent += "|";
-      setTimeout(blinkCursor, 5);
-    }
-  }
-
-  type();  // Start typing the message
+  type(); // Start typing the message
 }
 
-// This can be called on a button click or when the document loads, as needed.
-typeMessage();
 
 
 
-
+//file:///Users/faisal/Library/Mobile%20Documents/com~apple~CloudDocs/Projects/portfolio/index.html
+// Call the function when the document loads
+document.addEventListener('DOMContentLoaded', typeMessage);
 
 // Call the updateClock() function every second
 setInterval(updateClock, 1000);
-
-// Vinyl Records
-document.addEventListener("mousemove", moveVinylRecords);
-
-function moveVinylRecords(event) {
-  const vinylRecords = document.querySelectorAll(".vinyl-record");
-  const mouseX = event.clientX;
-  const mouseY = event.clientY;
-
-  vinylRecords.forEach((record) => {
-    const recordX = record.offsetLeft + record.offsetWidth / 2;
-    const recordY = record.offsetTop + record.offsetHeight / 2;
-    const distanceX = mouseX - recordX;
-    const distanceY = mouseY - recordY;
-    const maxRadius = 50; /* Adjust the maximum radius of movement */
-
-    if (Math.abs(distanceX) <= maxRadius && Math.abs(distanceY) <= maxRadius) {
-      record.style.transform = `translate(${distanceX}px, ${distanceY}px)`;
-    } else {
-      record.style.transform = "translate(0, 0)";
-    }
-  });
-}
-
 
 
 // Weather Forecast
@@ -226,7 +214,7 @@ document.addEventListener("mouseup", function () {
 });
 
 function toggleMusic() {
-  const vinylRecord = document.querySelector('.vinyl-record');
+
   const messageContainer = document.querySelector('.message-container');
   const musicButton = document.querySelector('.music-button');
   if (isPlaying) {
@@ -237,21 +225,17 @@ function toggleMusic() {
 
     messageContainer.classList.remove('fade-out'); // Show the message
     messageContainer.style.display = 'block';
-    vinylRecord.style.display='none'; // Assume you want to "shrink" the record when music stops
-
+  
   } else {
 
 
     messageContainer.classList.add('fade-out');
-    vinylRecord.classList.add('expand');
-    vinylRecord.style.display='block';
 
     setTimeout(function() {
       const messageElement = document.querySelector('.music-button');
       messageElement.textContent = "⏸"
       messageContainer.style.display = 'none';
-      vinylRecord.classList.add('expand'); // This will either add or remove the 'expand' class based on its current state
-    }, 1000);
+  }, 1000);
 
     audio.play();
     isPlaying = true;
