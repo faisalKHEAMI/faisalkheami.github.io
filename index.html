@@ -1,163 +1,131 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
 
+<html dir="ltr" lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="portfolio.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-  <title>Faisal Alkheami</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" type="text/css"/>
+<link href="portfolio_.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap" rel="stylesheet"/>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<title>Faisal Alkheami</title>
 </head>
-
 <body>
-  <div class="bg-animation">
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
-    <div id="stars4"></div>
+<h1 class="my_Name">FAISAL ALKHEAMI</h1>
+
+<div class="bg-animation">
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
+<div id="stars4"></div>
+</div>
+<!--
+<h1 class="Hello"></h1>
+<div class="message-container">
+<div class="screen">
+<div class="floating_Clock"></div>
+<p class="message"></p>
+<div class="vinyl-record">
+<img alt="" src="j.png"/>
+</div>
+</div>
+<div class="lid">
+<div class="buttons"></div>
+<div class="mouse"></div>
+</div>
+</div>
+<div class="room">
+<div class="light"></div>
+<div class="lighting"></div>
+<div class="ceiling"></div>
+<div class="walls">
+<div class="wall-Left"></div>
+<div class="wall-Back">
+<div class="arrow">
+<div class="overlay"></div>
+<div class="stick">
+<div class="arrowText">
+<p>Scroll Down!!</p>
+</div>
+</div>
+<div class="arrow-head1"></div>
+<div class="arrow-head2"></div>
+</div>
+</div>
+<div class="wall-Right"></div>
+</div>
+<div class="floor"></div>
+</div>
+-->
+
+
+
+
+<p class="Intro" id="card-like">
+  Welcome to my portfolio. Recently completing my Computer Science degree, I'm now actively pursuing a second major in Neuroscience, driven by a passion for interdisciplinary research. This site showcases my foundational technical skills and evolving projects, reflecting my journey toward a career in scientific inquiry. </p></div>
+<div class="pic" id="card-like"></div>
+
+
+<div class="projects-container " id="card-like"> <table>
+        <caption>My Projects</caption>
+        <thead>
+            <tr>
+                <th>Project</th>
+                <th>Description</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>  Research  </td><td>Interactive project showcasing work</td><td><a href="Reseatch.html">Visit</a></td></tr>
+            <tr><td>Weather Search</td><td>Interactive project showcasing work</td><td>N/A</td></tr>
+            <tr><td>Giglios.ca</td><td>Interactive project showcasing work</td><td><a href="http://sarrasbros.ca/">Visit</a></td></tr>
+            <tr><td>Aeroplane Club Uwindsor</td><td>Interactive project showcasing work</td><td>N/A</td></tr>
+        </tbody>
+    </table>
 </div>
 
 
-
-  <h1 class="Hello"></h1>
-
-  <div class="message-container">
-    <div class="screen">
-       <div class="floating_Clock"></div>
-       <p class="message"></p>
-       <div class="vinyl-record">
-       <img src="j.png" alt="">
-     </div>
-     </div>
-     <div class="lid">
-      <div class="buttons"></div>
-      <div class="mouse"></div>
-      </div>
-   </div>
-
-  <div class="room">
-    <div class="light"></div>
-    <div class="lighting"></div>
-    <div class="ceiling"></div>
-    <div class="walls">
-      <div class="wall-Left"></div>
-      <div class="wall-Back">   
-        <div class="arrow">
-          <div class="overlay"></div>
-          <div class="stick">
-            <div class="arrowText">
-              <p>Scroll Down!!</p>
-            </div>
-          </div>
-          <div class="arrow-head1"></div>
-          <div class="arrow-head2"></div>
-        </div>
-  
-      </div>
-      <div class="wall-Right"></div>
-   </div>
-  
-
-    <div class="floor"></div>
-  
-
+<div class="weahter_api " id="card-like">
+  <h3>Weather Search</h3>
+  <div class="weather-input">
+      <input type="text" class="submit_city_text" id="cityInput" placeholder="Enter a city name">
+      <button class="submit_city" onclick="searchCity()">
+          <i class="fas fa-search"></i>
+          <span class="search-text">Search Weather</span> </button>
   </div>
-
-
-
-
-  
-
-
-  <div class="intro-section">
-    <div class="first_page">
-      <div class="first_View">
-        <div class="pic"></div>
-        <div class="general_Info">
-
-          <h1 class="my_Name">FAISAL ALKHEAMI</h1>
-          <p class="Intro">
-            Welcome to my website. I have developed it using some of my basic skills, and I continuously update it for improvement. Please note that as I am also focusing on school, this site showcases only a portion of my skills. Currently, the website is best viewed on a desktop. (Total hours spent developing: 15hrs)
-          </div>
-
-      </div>
-    </div>
+  <div class="Weather_result">
+      <p><small>Wind speed:</small></p>
+      <p>
+          <span id="wind"></span>
+          <i class="fas fa-wind"></i>
+      </p>
+      <p><small>Temperture:</small></p>
+      <p>
+          <span id="temp"></span>
+          <i class="fas fa-thermometer-three-quarters"></i>
+      </p>
+      <p class="api-credit"><small>Results provided by AccuWeather's implemented API </small></p>
   </div>
-  <h2 class="projects">My projects</h2>
-    <div class="projects-container">
- 
-      <section>
-      <div class="project">
-        <h3>Weather Search</h3>
-        <div class="weather-input">
-          <input type="text" class="submit_city_text" id="cityInput" placeholder="Enter a city name">
-          <button class="submit_city" onclick="searchCity()">
-            <i class="fas fa-search"></i>
-            <span class="search-text">Search Weather</span>
-          </button>
-        </div>
-        <div class="Weather_result">
-          <p><small>Wind speed:</small></p>
-          <p>
-            <span id="wind"></span>
-            <i class="fas fa-wind"></i>
-          </p>
-          <p><small>Temperture:</small></p>
-          <p>
-            <span id="temp"></span>
-            <i class="fas fa-thermometer-three-quarters"></i>
-          </p>
-          <p><small>Results pprovided by accuweather's implemnted API </small></p>
-        </div>
-      </div>
-    </section>
+</div>
 
-    <section>
-      <div class="project">
-        <a href="http://sarrasbros.ca/"><h3>Giglios.ca</h3></a>
-        <iframe src="http://sarrasbros.ca/" frameborder="0px" scrolling="auto" ></iframe>
-      </div>
-      </section>
-
- 
-  <section>
-      <div class="project">
-        <h3>Aeroplane Club Uwindsor</h3>
-        <iframe src="https://faisalkheami.github.io/AeroplaneClubUwindsor/" frameborder="20px" scrolling="auto" ></iframe>
-      </div>
-    </section>
-
-    </div>
-    
-    
-  <div class="social_media">
-
-
-  <h1>Contact me or follow me!</h1>
-    <div class="social_links">
-      <a href="https://www.linkedin.com/in/faisal-alkheami-a194a6207">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/faisalKHEAMI">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="tel:+12267241456">
-        <i class="fas fa-phone"></i>
-      </a>
-      <a href="mailto:alkheam@uwindsor.ca">
-        <i class="fas fa-envelope"></i>
-      </a>
-    </div>
-    </div>
-
- 
-
-  <script src="portfolio.js"></script>
+<div class="social_media" id="card-like">
+<h1>Contact me or follow me!</h1>
+<div class="social_links" >
+<a href="https://www.linkedin.com/in/faisal-alkheami-a194a6207">
+<i class="fab fa-linkedin"></i>
+</a>
+<a href="https://github.com/faisalKHEAMI">
+<i class="fab fa-github"></i>
+</a>
+<a href="tel:+12267241456">
+<i class="fas fa-phone"></i>
+</a>
+<a href="mailto:alkheam@uwindsor.ca">
+<i class="fas fa-envelope"></i>
+</a>
+</div>
+</div>
+<script src="portfolio.js"></script>
 </body>
-
 </html>
