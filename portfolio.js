@@ -1,4 +1,6 @@
 // Clock
+let requestCount = 0; // Track the number of requests made
+
 function updateClock() {
   var now = new Date();
   var hours = now.getHours();
@@ -41,7 +43,7 @@ function typeMessage() {
 
   const messages = [
     "Welcome to my portfolio!",
-    "\nLet's create something beautiful together!"
+    "\nLet's build something beautiful together!"
   ];
   const messageElement = document.querySelector('.message');
   let index = 0;
@@ -125,7 +127,6 @@ function searchCity() {
   xhr.send();
 }
 
-let requestCount = 0; // Track the number of requests made
 
 function updateForecast(response) {
   var windSpeed = response[0].Wind.Speed.Value;
