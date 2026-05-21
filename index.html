@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-
-<html dir="ltr" lang="en">
+<html lang="en">
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Faisal Alkheami — Computer Science & Cybersecurity</title>
+<meta name="description" content="Faisal Alkheami — Computer Science graduate with a focus in cybersecurity. Open to full-time roles, internships, and research opportunities." />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" type="text/css"/>
 <link href="portfolio_.css" rel="stylesheet" type="text/css"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
@@ -9,124 +14,269 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap" rel="stylesheet"/>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<title>Faisal Alkheami</title>
 </head>
 <body>
-<h1 class="my_Name">FAISAL ALKHEAMI</h1>
 
-<div class="bg-animation">
-<div id="stars"></div>
-<div id="stars2"></div>
-<div id="stars3"></div>
-<div id="stars4"></div>
-</div>
-<!--
-<h1 class="Hello"></h1>
-<div class="message-container">
-<div class="screen">
-<div class="floating_Clock"></div>
-<p class="message"></p>
-<div class="vinyl-record">
-<img alt="" src="j.png"/>
-</div>
-</div>
-<div class="lid">
-<div class="buttons"></div>
-<div class="mouse"></div>
-</div>
-</div>
-<div class="room">
-<div class="light"></div>
-<div class="lighting"></div>
-<div class="ceiling"></div>
-<div class="walls">
-<div class="wall-Left"></div>
-<div class="wall-Back">
-<div class="arrow">
-<div class="overlay"></div>
-<div class="stick">
-<div class="arrowText">
-<p>Scroll Down!!</p>
-</div>
-</div>
-<div class="arrow-head1"></div>
-<div class="arrow-head2"></div>
-</div>
-</div>
-<div class="wall-Right"></div>
-</div>
-<div class="floor"></div>
-</div>
--->
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">FA</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-
-
-
-<p class="Intro" id="card-like">
-    Curious learner, with a Computer Science degree, strong cybersecurity, Seeking opportunities to apply technical, analytical, and research skills in environments that blend computing, and security.</p></div>
-<div class="pic" id="card-like"></div>
-
-
-<div class="projects-container " id="card-like"> <table>
-        <caption>My Projects</caption>
-        <thead>
-            <tr>
-                <th>Project</th>
-                <th>Description</th>
-                <th>Link</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>  Research  </td><td>A page listing my research focus </td><td><a href="Reseatch.html">Visit</a></td></tr>
-            <tr><td>Weather Search</td><td>Inquire about any city weather condition from within this website!!!</td><td><a href="#weather_api_anchor">Weather condition</a></td></tr>
-            <tr><td>Giglios.ca</td><td>Resturant orders handling website </td><td><a href="http://sarrasbros.ca/">Visit</a></td></tr>
-            <tr><td>Aeroplane Club Uwindsor</td><td>Uwindsor AeroDesign club website </td><td>N/A</td></tr>
-        </tbody>
-    </table>
-</div>
-
-
-<div class="weahter_api " id="card-like">
-    <a id="weather_api_anchor"></a>
-  <h3>Weather Search</h3>
-  <div class="weather-input">
-      <input type="text" class="submit_city_text" id="cityInput" placeholder="Enter a city name">
-      <button class="submit_city" onclick="searchCity()">
-          <i class="fas fa-search"></i>
-          <span class="search-text">Search Weather</span> </button>
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-eyebrow">Open to opportunities</p>
+  <h1>Faisal<br><em>Alkheami</em></h1>
+  <p class="hero-sub">Computer Science graduate with a focus in cybersecurity — blending analytical thinking, security research, and full-stack development.</p>
+  <div class="hero-cta">
+    <a href="#contact" class="btn btn-primary">Get in touch →</a>
+    <a href="#projects" class="btn btn-ghost">View projects</a>
   </div>
-  <div class="Weather_result">
-      <p><small>Wind speed:</small></p>
-      <p>
-          <span id="wind"></span>
-          <i class="fas fa-wind"></i>
-      </p>
-      <p><small>Temperture:</small></p>
-      <p>
-          <span id="temp"></span>
-          <i class="fas fa-thermometer-three-quarters"></i>
-      </p>
-      <p class="api-credit"><small>Results provided by AccuWeather's implemented API </small></p>
-  </div>
+  <span class="scroll-hint">Scroll</span>
 </div>
 
-<div class="social_media" id="card-like">
-<h1>Contact me or follow me!</h1>
-<div class="social_links" >
-<a href="https://www.linkedin.com/in/faisal-alkheami-a194a6207">
-<i class="fab fa-linkedin"></i>
-</a>
-<a href="https://github.com/faisalKHEAMI">
-<i class="fab fa-github"></i>
-</a>
-<a href="tel:+12267241456">
-<i class="fas fa-phone"></i>
-</a>
-<a href="mailto:alkheam@uwindsor.ca">
-<i class="fas fa-envelope"></i>
-</a>
-</div>
-</div>
-<script src="portfolio.js"></script>
+<hr class="divider" />
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label">About</p>
+  <div class="about-grid">
+    <div class="about-text">
+      <h2>Building at the intersection of computing &amp; security</h2>
+      <p>I'm a curious learner with a Computer Science degree and a strong foundation in cybersecurity. I thrive in environments that challenge me to apply both technical depth and analytical rigor.</p>
+      <p>My work spans full-stack web development, security research, and systems design — always with an eye toward robust, real-world application.</p>
+      <p>Currently based in Windsor, Ontario, and actively seeking roles where I can contribute meaningfully from day one.</p>
+    </div>
+    <div class="skills-block">
+      <h3>Technical skills</h3>
+      <div class="skill-tags">
+        <span class="tag">Cybersecurity</span>
+        <span class="tag">Network Security</span>
+        <span class="tag">Python</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Web Development</span>
+        <span class="tag">API Integration</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Git</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Research</span>
+      </div>
+      <h3>Education</h3>
+      <div class="skill-tags">
+        <span class="tag">B.Sc. Computer Science</span>
+        <span class="tag">University of Windsor</span>
+      </div>
+      <h3>Interests</h3>
+      <div class="skill-tags">
+        <span class="tag">Threat Analysis</span>
+        <span class="tag">Secure Systems</span>
+        <span class="tag">Aerodesign</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- PROJECTS -->
+<section id="projects">
+  <p class="section-label">Projects</p>
+  <div class="projects-list">
+
+    <a href="Research.html" class="project-card">
+      <div>
+        <p class="project-num">01 — Research</p>
+        <p class="project-name">Security Research</p>
+        <p class="project-desc">A curated overview of my cybersecurity research focus areas, methodologies, and findings.</p>
+        <div class="project-tags">
+          <span class="project-tag">Cybersecurity</span>
+          <span class="project-tag">Research</span>
+        </div>
+      </div>
+      <span class="project-arrow">↗</span>
+    </a>
+
+    <a href="#weather" class="project-card">
+      <div>
+        <p class="project-num">02 — API</p>
+        <p class="project-name">Weather Search</p>
+        <p class="project-desc">Real-time city weather lookup powered by AccuWeather's API — built into the portfolio as a live interactive demo.</p>
+        <div class="project-tags">
+          <span class="project-tag">API</span>
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">Live Demo ↓</span>
+        </div>
+      </div>
+      <span class="project-arrow">↓</span>
+    </a>
+
+    <a href="http://sarrasbros.ca/" target="_blank" rel="noopener" class="project-card">
+      <div>
+        <p class="project-num">03 — Full-stack</p>
+        <p class="project-name">Giglios.ca</p>
+        <p class="project-desc">Restaurant order management web platform — handling online orders and front-of-house workflows end to end.</p>
+        <div class="project-tags">
+          <span class="project-tag">Web App</span>
+          <span class="project-tag">Full-stack</span>
+        </div>
+      </div>
+      <span class="project-arrow">↗</span>
+    </a>
+
+    <div class="project-card" style="cursor: default;">
+      <div>
+        <p class="project-num">04 — Club</p>
+        <p class="project-name">UWindsor AeroDesign</p>
+        <p class="project-desc">Website for the University of Windsor's AeroDesign Club — built to support recruitment and team collaboration.</p>
+        <div class="project-tags">
+          <span class="project-tag">Web</span>
+          <span class="project-tag">University</span>
+        </div>
+      </div>
+      <span class="project-arrow" style="opacity: 0.25;">—</span>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- WEATHER -->
+<section id="weather">
+  <p class="section-label">Live Demo</p>
+  <div class="weather-box">
+    <h3>Weather Search</h3>
+    <p class="wdesc">Enter any city to get current conditions via AccuWeather.</p>
+    <div class="weather-input-row">
+      <input
+        class="weather-input"
+        id="cityInput"
+        type="text"
+        placeholder="e.g. Windsor, Toronto, London..."
+        onkeydown="if(event.key==='Enter') fetchWeather()"
+      />
+      <button class="btn btn-primary" onclick="fetchWeather()">Search</button>
+    </div>
+    <p class="weather-error" id="weatherError">City not found. Please try another name.</p>
+    <p class="weather-loading" id="weatherLoading">Fetching weather…</p>
+    <div class="weather-result" id="weatherResult">
+      <div class="w-stat">
+        <p class="w-stat-label">Temperature</p>
+        <p class="w-stat-value" id="wTemp">—</p>
+      </div>
+      <div class="w-stat">
+        <p class="w-stat-label">Wind Speed</p>
+        <p class="w-stat-value" id="wWind">—</p>
+      </div>
+      <div class="w-stat" style="grid-column: 1 / -1;">
+        <p class="w-stat-label">Conditions</p>
+        <p class="w-stat-value" style="font-size: 1.2rem;" id="wCondition">—</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- CONTACT -->
+<section id="contact">
+  <p class="section-label">Contact</p>
+  <div class="contact-inner">
+    <div>
+      <h2>Let's work<br><em style="font-style:italic; color:var(--accent);">together</em></h2>
+      <p>Open to full-time roles, internships, and collaborative projects in cybersecurity, software development, or research. Based in Windsor, Ontario — available immediately.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:alkheam@uwindsor.ca" class="contact-link">
+        <div>
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-val">alkheam@uwindsor.ca</span>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+      <a href="https://www.linkedin.com/in/faisal-alkheami-a194a6207" target="_blank" rel="noopener" class="contact-link">
+        <div>
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-val">faisal-alkheami</span>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+      <a href="https://github.com/faisalKHEAMI" target="_blank" rel="noopener" class="contact-link">
+        <div>
+          <span class="contact-link-label">GitHub</span>
+          <span class="contact-link-val">faisalKHEAMI</span>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+      <a href="tel:+12267241456" class="contact-link">
+        <div>
+          <span class="contact-link-label">Phone</span>
+          <span class="contact-link-val">+1 (226) 724-1456</span>
+        </div>
+        <span class="contact-link-arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Faisal Alkheami</p>
+  <p>Windsor, Ontario · Open to opportunities</p>
+</footer>
+
+<script>
+  async function fetchWeather() {
+    const city = document.getElementById('cityInput').value.trim();
+    const errEl = document.getElementById('weatherError');
+    const loadEl = document.getElementById('weatherLoading');
+    const resultEl = document.getElementById('weatherResult');
+
+    errEl.style.display = 'none';
+    resultEl.classList.remove('visible');
+
+    if (!city) return;
+
+    loadEl.style.display = 'block';
+
+    try {
+      // AccuWeather location search
+      const API_KEY = 'YOUR_ACCUWEATHER_API_KEY'; // <-- Replace with your key
+      const locRes = await fetch(
+        `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${API_KEY}&q=${encodeURIComponent(city)}`
+      );
+      const locData = await locRes.json();
+
+      if (!locData || locData.length === 0) throw new Error('Not found');
+
+      const locationKey = locData[0].Key;
+
+      const wxRes = await fetch(
+        `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${API_KEY}&details=true`
+      );
+      const wxData = await wxRes.json();
+
+      if (!wxData || wxData.length === 0) throw new Error('No data');
+
+      const wx = wxData[0];
+      document.getElementById('wTemp').textContent =
+        `${Math.round(wx.Temperature.Metric.Value)}°C`;
+      document.getElementById('wWind').textContent =
+        `${Math.round(wx.Wind.Speed.Metric.Value)} km/h`;
+      document.getElementById('wCondition').textContent =
+        wx.WeatherText;
+
+      loadEl.style.display = 'none';
+      resultEl.classList.add('visible');
+    } catch (e) {
+      loadEl.style.display = 'none';
+      errEl.style.display = 'block';
+    }
+  }
+</script>
+
 </body>
 </html>
